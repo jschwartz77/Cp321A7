@@ -17,7 +17,7 @@ win_counts = df['Winners'].value_counts().to_dict()
 
 # Create a Dash app
 app = Dash(__name__)
-server = app.server
+
 
 app.layout = html.Div([
     html.H1("FIFA World Cup Dashboard"),
@@ -77,6 +77,7 @@ def update_year_output(selected_year):
     winner = row['Winners']
     runner_up = row['Runners-up']
     return f"In {selected_year}, {winner} won the World Cup and {runner_up} was the runner-up."
+server = app.server
 
 if __name__ == '__main__':
     app.run(debug=True)
