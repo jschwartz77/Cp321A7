@@ -17,6 +17,7 @@ win_counts = df['Winners'].value_counts().to_dict()
 
 # Create a Dash app
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1("FIFA World Cup Dashboard"),
